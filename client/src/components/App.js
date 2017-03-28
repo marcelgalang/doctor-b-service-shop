@@ -1,5 +1,5 @@
 import React from 'react'
-// import ProductsIndex from './ProductsIndex'
+import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 
 const App = () => (
@@ -7,6 +7,7 @@ const App = () => (
       <h1>DR.B Mac Repair</h1>
       <h2>WE FIX JUST ABOUT EVERYTHING</h2>
       <h3>MACS, PCS, TABLETS, CONSOLES, & SMART PHONES</h3>
+      <ProductsContainer/>
       <CartContainer/>
   </div>
 )

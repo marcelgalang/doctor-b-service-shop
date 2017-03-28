@@ -27,7 +27,7 @@ const ProductsList = ({ title, children }) =>(
 
     <Route path="/products/:productId"  render={({match}) => (
       <Product product=
-        {children.find(product => product.id === match.params.productId)}/>
+        {children.find(product => product.id == match.params.productId)}/>
     )}/>
   </Main>
   </Root>
