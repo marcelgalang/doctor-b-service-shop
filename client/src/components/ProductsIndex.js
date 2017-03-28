@@ -30,7 +30,7 @@ const ProductsIndex = ({ title, children, product }) => (
     </Sidebar>
     <Main>
     <Route path="/products/:productId" render={({  match }) => (
-      <ProductDetail product={children.find(product => product.id === match.params.productId)}/>
+      <ProductDetail product={children.find(product => product.id == match.params.productId)}/>
     )}/>
     </Main>
   </Root>

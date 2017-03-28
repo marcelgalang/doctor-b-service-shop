@@ -27,7 +27,7 @@ const ProductsIndexContainer = ({ products, addToCart }) => (
       ))}
     </ProductsList>
     <Route path="/products/:id" render={({ match }) => (
-        <ProductDetail product={products.find(product => product.id === match.params.productId)}/>
+        <ProductDetail product={products.find(product => product.id == match.params.productId)}/>
       )}/>
   </Root>
 )
