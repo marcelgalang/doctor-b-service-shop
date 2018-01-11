@@ -9,6 +9,15 @@ products= [
 
 ]
 
+categories = [
+  'iPhone', 'Android', 'Tablet', 'Mac', 'PC'
+]
+
+categories.each do |title|
+  Category.create(title: title)
+end
+
 products.each do |title, description, price, inventory, category_id|
   Product.create( title: title, description: description, price:price, inventory:inventory, category_id:category_id )
 end
+

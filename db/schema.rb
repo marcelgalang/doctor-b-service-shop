@@ -29,15 +29,6 @@ ActiveRecord::Schema.define(version: 20170405235027) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ordered_services", force: :cascade do |t|
-    t.integer  "service_id"
-    t.integer  "cart_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_ordered_services_on_cart_id", using: :btree
-    t.index ["service_id"], name: "index_ordered_services_on_service_id", using: :btree
-  end
-
   create_table "product_carts", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
@@ -104,8 +95,6 @@ ActiveRecord::Schema.define(version: 20170405235027) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "ordered_services", "carts"
-  add_foreign_key "ordered_services", "services"
   add_foreign_key "product_carts", "carts"
   add_foreign_key "product_carts", "products"
   add_foreign_key "products", "categories"
