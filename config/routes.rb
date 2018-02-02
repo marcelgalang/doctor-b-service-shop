@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :products, :categories, :carts
 
   end
+
+  root "api/products#index"
 end
