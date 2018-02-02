@@ -10,7 +10,7 @@ products= [
 ]
 
 categories = [
-  'iPhone', 'Android', 'Tablet', 'Mac', 'PC'
+  'Phone', 'Mac', 'Tablet'
 ]
 
 categories.each do |title|
